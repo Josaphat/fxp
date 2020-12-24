@@ -8,24 +8,24 @@ extern "C" {
 #include <stdint.h>
 
 typedef struct {
-    int32_t val;
-} fxp;
+  int32_t val;
+} fxp26;
 
-fxp fxp_from_int(int a);
-fxp fxp_from_fl(float f);
-fxp fxp_from_dbl(double d);
+fxp26 fxp26_from_int(int a);
+fxp26 fxp26_from_fl(float f);
+fxp26 fxp26_from_dbl(double d);
 
-float fxp_to_fl(fxp a);
-double fxp_to_dbl(fxp a);
+float fxp26_to_fl(fxp26 a);
+double fxp26_to_dbl(fxp26 a);
 
 // neg: compute (-a)
-fxp fxp_neg(fxp a);
+fxp26 fxp26_neg(fxp26 a);
 
-fxp fxp_mul(fxp a, fxp b);
-fxp fxp_add(fxp a, fxp b);
+fxp26 fxp26_mul(fxp26 a, fxp26 b);
+fxp26 fxp26_add(fxp26 a, fxp26 b);
 
-// fxp_sub: compute (a - b)
-fxp fxp_sub(fxp a, fxp b);
+// fxp_26_sub: compute (a - b)
+fxp26 fxp26_sub(fxp26 a, fxp26 b);
 
 #ifdef __cplusplus
 }
